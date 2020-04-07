@@ -1,0 +1,21 @@
+
+<form>
+    <div class="signup-page">
+      <h1 class="sign">Sign Up</h1>
+        <div class="form">
+          
+          <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+            <div class="login-form">
+            <input type="text" name="Firstname" class="form-control" formControlName="Firstname" [(ngModel)]="userModel.Firstname" placeholder="Firstname"/>
+            <input type="text" name="Lastname" class="form-control" formControlName="Lastname" [(ngModel)]="userModel.Lastname" placeholder="Lastname"/>
+            <input type="text" name="Email" class="form-control" formControlName="Email" [(ngModel)]="userModel.Email" placeholder="Email"/>
+            <input type="password" name="password" class="form-control" formControlName="password" [(ngModel)]="userModel.password" placeholder="password"/>
+            <button routerLink="/login"  type="submit" (click)="submit()">Sign up</button>
+            
+            <a routerLink="/login" class="btn btn-link">Cancel</a>
+          </div>
+          </form>
+        </div>
+      </div>
+     
+</form>
