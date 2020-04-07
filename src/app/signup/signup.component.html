@@ -10,7 +10,7 @@
             <input type="text" name="Lastname" class="form-control" formControlName="Lastname" [(ngModel)]="userModel.Lastname" placeholder="Lastname"/>
             <input type="text" name="Email" class="form-control" formControlName="Email" [(ngModel)]="userModel.Email" placeholder="Email"/>
             <input type="password" name="password" class="form-control" formControlName="password" [(ngModel)]="userModel.password" placeholder="password"/>
-            <button routerLink="/login"  type="submit" (click)="submit()">Sign up</button>
+            <button type="button" (click)="submit()">Sign up</button>
             
             <a routerLink="/login" class="btn btn-link">Cancel</a>
           </div>

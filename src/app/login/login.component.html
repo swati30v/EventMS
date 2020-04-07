@@ -1,13 +1,13 @@
-<form>
+<form [formGroup]="myGroup" (ngSubmit)="submit()" novalidate >
     <div class="Login-page">
       <h1 class="sign">Login</h1>
         <div class="form">
           
           <form class="login-form">
             
-            <input type="text" placeholder="Email"/>
-            <input type="password" placeholder="password"/>
-            <button routerLink="/profile">login</button>
+            <input type="text" name="Email" class="form-control" formControlName="Email" [(ngModel)]="userModel.Email" placeholder="Email"/>
+            <input type="password" name="password" class="form-control" formControlName="password" [(ngModel)]="userModel.password" placeholder="password"/>
+            <button type="button" (click)="submit()">login</button>
             <a routerLink="/signup" class="btn btn-link">Signup</a>
           </form>
         </div>

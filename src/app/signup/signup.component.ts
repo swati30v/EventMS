@@ -10,18 +10,28 @@ import { FormControl, FormGroup,NgForm,FormArray} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
    
-  public userModel={Firstname:"swati",Lastname:"verma",Email:"swati@gmail.com",password:"123"};
+  public userModel={Firstname:"",Lastname:"",Email:"", password:""};
   registerForm = new FormGroup({ });
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {
+    
+    this.registerForm = new FormGroup({
+      Firstname: new FormControl(),
+      Lastname: new FormControl(),
+      Email: new FormControl(),
+      password : new FormControl()
+      
+   });
+
+   }
 
   ngOnInit(): void {
-    this.router.navigate([""])
   }
   
   submit(){
     console.log(this.userModel);
+    this.router.navigate(["login"])
 
     
   }
