@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventComponent } from './event/event.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,10 @@ import { EventComponent } from './event/event.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
+  
     FormsModule,
-     ReactiveFormsModule,
+    AppRoutingModule,
     
   ],
   providers: [],

@@ -4,13 +4,13 @@
       <h1 class="sign">Sign Up</h1>
         <div class="form">
           
-          <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+          <form [formGroup]="registerForm" (ngSubmit)="submit()">
             <div class="login-form">
-            <input type="text" name="Firstname" class="form-control" formControlName="Firstname" [(ngModel)]="userModel.Firstname" placeholder="Firstname"/>
-            <input type="text" name="Lastname" class="form-control" formControlName="Lastname" [(ngModel)]="userModel.Lastname" placeholder="Lastname"/>
-            <input type="text" name="Email" class="form-control" formControlName="Email" [(ngModel)]="userModel.Email" placeholder="Email"/>
-            <input type="password" name="password" class="form-control" formControlName="password" [(ngModel)]="userModel.password" placeholder="password"/>
-            <button type="button" (click)="submit()">Sign up</button>
+            <input type="text" name="Firstname" id="Firstname" class="form-control" formControlName="Firstname" [(ngModel)]="userModel.Firstname" placeholder="Firstname" [ngClass]="{ 'is-invalid': submitted && f.Firstname.errors }"/>
+            <input type="text" name="Lastname" id="Lastname" class="form-control" formControlName="Lastname" [(ngModel)]="userModel.Lastname" placeholder="Lastname" [ngClass]="{ 'is-invalid': submitted && f.Lastname.errors }"/>
+            <input type="text" name="Email"  id="Email" class="form-control" formControlName="Email" [(ngModel)]="userModel.Email" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }"/>
+            <input type="password" name="password" id="password" class="form-control" formControlName="password" [(ngModel)]="userModel.password" placeholder="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+            <button type="button"  (click)="submit()">Sign up</button>
             
             <a routerLink="/login" class="btn btn-link">Cancel</a>
           </div>
